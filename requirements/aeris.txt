@@ -1,0 +1,5 @@
+joblib
+kornia==0.2.0
+imageio
+opencv-python 
+scipy
