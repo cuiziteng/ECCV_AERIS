@@ -13,6 +13,7 @@ model = dict(
         in_channel=512,
         sr_channel=16),
     arrd = dict(type='Adaptive_SR', in_c=16),
+    scale_cfg = dict(deg_type='all', scale_list=[4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]),
     bbox_head=dict(
         type='CenterNetHead',
         num_classes=80,
