@@ -1,4 +1,4 @@
-# Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection
+# Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection [[paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690465.pdf)]
 
 
 ## Abstract:
