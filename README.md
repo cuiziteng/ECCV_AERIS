@@ -38,6 +38,8 @@ conda activate AERIS
 
 conda install --yes -c pytorch pytorch=1.7.0 torchvision cudatoolkit=11.0 (for other version, please follow [pytorch](https://pytorch.org/))
 
+pip install mmcv-full==1.5.0 -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.0/index.html (download mmcv with your cuda and torch version)
+
 pip install -r requirements.txt
 
 pip install -v -e .
