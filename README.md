@@ -124,16 +124,13 @@ The work is heavily build on [mmdetection](https://github.com/open-mmlab/mmdetec
 If you find this work useful in your research, please consider to cite:
 
 ```
-@misc{ECCV_AERIS,
-  doi = {10.48550/ARXIV.2208.03062},
-  url = {https://arxiv.org/abs/2208.03062},
-  author = {Cui, Ziteng and Zhu, Yingying and Gu, Lin and Qi, Guo-Jun and Li, Xiaoxiao and Zhang, Renrui and Zhang, Zenghui and Harada, Tatsuya},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution 4.0 International}
+@inproceedings{ECCV22_AERIS,
+      title={Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection}, 
+      author={Cui, Ziteng and Zhu, Yingying and Gu, Lin and Qi, Guo-Jun and Li, Xiaoxiao and Zhang, Renrui and Zhang, Zenghui and Harada, Tatsuya},
+      year={2022},
+      booktitle={ECCV},
 }
+
 ```
 
 
