@@ -1,6 +1,25 @@
 # Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection [[paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690465.pdf)]
 
 
+## Reference:
+
+The work is heavily build on [mmdetection](https://github.com/open-mmlab/mmdetection) and [kornia](https://openaccess.thecvf.com/content_WACV_2020/html/Riba_Kornia_an_Open_Source_Differentiable_Computer_Vision_Library_for_PyTorch_WACV_2020_paper.html), thanks for their great project!
+
+If you use this work in your research, please consider to cite:
+
+```
+@inproceedings{cui2022exploring,
+  title={Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection},
+  author={Cui, Ziteng and Zhu, Yingying and Gu, Lin and Qi, Guo-Jun and Li, Xiaoxiao and Zhang, Renrui and Zhang, Zenghui and Harada, Tatsuya},
+  booktitle={European Conference on Computer Vision},
+  pages={473--491},
+  year={2022},
+  organization={Springer}
+}
+
+```
+
+
 ## Abstract:
 Image restoration algorithms such as super resolution (SR) are indispensable pre-processing modules for object detection in low quality images. Most of these algorithms assume the degradation is fixed and known a priori. However, in practical, either the real degradation or optimal up-sampling ratio rate is unknown or differs from assumption, leading to a deteriorating performance for both the pre-processing module and the consequent high-level task such as object detection. Here, we propose a novel self-supervised framework to detect objects in degraded low resolution images. We utilizes the downsampling degradation as a kind of transformation for self-supervised signals to explore the equivariant representation against various resolutions and other degradation conditions. The Auto Encoding Resolution in Self-supervision (AERIS) framework could further take the advantage of advanced SR architec- tures with an arbitrary resolution restoring decoder to reconstruct the original correspondence from the degraded input image. Both the rep- resentation learning and object detection are optimized jointly in an end-to-end training fashion. The generic AERIS framework could be implemented on various mainstream object detection architectures with different backbones. The extensive experiments show that our methods has achieved superior performance compared with existing methods when facing variant degradation situations.
 
@@ -117,21 +136,7 @@ We show the CenterNet-Res18-AERIS (Stage2) training for example:
 CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 bash tools/dist_train.sh configs/centernet_AERIS/centernet_up_stage2.py 4
 ```
 
-## Citation:
 
-The work is heavily build on [mmdetection](https://github.com/open-mmlab/mmdetection) and [kornia](https://openaccess.thecvf.com/content_WACV_2020/html/Riba_Kornia_an_Open_Source_Differentiable_Computer_Vision_Library_for_PyTorch_WACV_2020_paper.html), thanks for their great project!
-
-If you find this work useful in your research, please consider to cite:
-
-```
-@inproceedings{ECCV22_AERIS,
-      title={Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection}, 
-      author={Cui, Ziteng and Zhu, Yingying and Gu, Lin and Qi, Guo-Jun and Li, Xiaoxiao and Zhang, Renrui and Zhang, Zenghui and Harada, Tatsuya},
-      year={2022},
-      booktitle={ECCV},
-}
-
-```
 
 
 
