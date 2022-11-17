@@ -136,6 +136,19 @@ We show the CenterNet-Res18-AERIS (Stage2) training for example:
 CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 bash tools/dist_train.sh configs/centernet_AERIS/centernet_up_stage2.py 4
 ```
 
+## Other Related Research: 
+
+(1). Robust object detection under low-light condition:
+
+ICCV 2021: Multitask AET with Orthogonal Tangent Regularity for Dark Object Detection ([project](https://github.com/cuiziteng/ICCV_MAET))
+
+
+(2). Fast low-light enhancement and exposure correction using Transformer:
+
+BMVC 2022: You Only Need 90K Parameters to Adapt Light: A Light Weight Transformer for Image Enhancement and Exposure Correction ([project](https://github.com/cuiziteng/Illumination-Adaptive-Transformer))
+
+
+
 
 
 
