@@ -3,7 +3,7 @@
 
 ## Reference:
 
-The work is heavily build on [mmdetection](https://github.com/open-mmlab/mmdetection) and [kornia](https://openaccess.thecvf.com/content_WACV_2020/html/Riba_Kornia_an_Open_Source_Differentiable_Computer_Vision_Library_for_PyTorch_WACV_2020_paper.html), thanks for their great project!
+The work is build on [mmdetection](https://github.com/open-mmlab/mmdetection) and [kornia](https://openaccess.thecvf.com/content_WACV_2020/html/Riba_Kornia_an_Open_Source_Differentiable_Computer_Vision_Library_for_PyTorch_WACV_2020_paper.html), thanks for their great project!
 
 If you use this work in your research, please consider to cite:
 
