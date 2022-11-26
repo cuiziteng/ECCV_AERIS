@@ -1,22 +1,6 @@
 # Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection [[paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690465.pdf)]
 
 
-## Reference:
-
-The work is build on [mmdetection](https://github.com/open-mmlab/mmdetection) and [kornia](https://openaccess.thecvf.com/content_WACV_2020/html/Riba_Kornia_an_Open_Source_Differentiable_Computer_Vision_Library_for_PyTorch_WACV_2020_paper.html), thanks for their great project!
-
-If you use this work in your research, please consider to cite:
-
-```
-@inproceedings{cui2022exploring,
-  title={Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection},
-  author={Cui, Ziteng and Zhu, Yingying and Gu, Lin and Qi, Guo-Jun and Li, Xiaoxiao and Zhang, Renrui and Zhang, Zenghui and Harada, Tatsuya},
-  booktitle={European Conference on Computer Vision},
-  pages={473--491},
-  year={2022},
-  organization={Springer}
-}
-```
 
 
 ## Abstract:
@@ -45,6 +29,25 @@ Image restoration algorithms such as super resolution (SR) are indispensable pre
 <p align="center">
   Fig 3. We use AERIS to find the scale-invariant feature for object detection under low resolution.
 </p>
+
+
+
+## Reference:
+
+The work is build on [mmdetection](https://github.com/open-mmlab/mmdetection) and [kornia](https://openaccess.thecvf.com/content_WACV_2020/html/Riba_Kornia_an_Open_Source_Differentiable_Computer_Vision_Library_for_PyTorch_WACV_2020_paper.html), thanks for their great project!
+
+If you use this work in your research, please consider to cite:
+
+```
+@inproceedings{cui2022exploring,
+  title={Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection},
+  author={Cui, Ziteng and Zhu, Yingying and Gu, Lin and Qi, Guo-Jun and Li, Xiaoxiao and Zhang, Renrui and Zhang, Zenghui and Harada, Tatsuya},
+  booktitle={European Conference on Computer Vision},
+  pages={473--491},
+  year={2022},
+  organization={Springer}
+}
+```
 
 ## Environment:
 The code is base on mmdet 2.23.0, to use this code please following the steps build enviroment:
