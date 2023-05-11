@@ -1,6 +1,7 @@
 # Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection [[paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690465.pdf)]
 
-
+## News:
+Upload degradation generation file [data_gen.py](https://github.com/cuiziteng/ECCV_AERIS/blob/master/data_gen.py), you could generate your own degradation data. 
 
 
 ## Abstract:
