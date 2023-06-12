@@ -134,62 +134,6 @@ def down_json(json_file=label_path, resolution=2):
     f.write(data_out)
     f.close()
     
-    
-    
-
-# Random Generation a degradation dataset
-def random_deg(img):
-    '''
-    input:
-    img (Tensor): Input images of shape (H,W,C).
-    resolution (tuple): Resolution number, range from 1~4
-    keep_shape (bool): Choose to return same size or lower size
-
-    return:
-    keep_shape = True: img_low (Tensor): Output degraded images of shape (H,W,C).
-    keep_shape = False: img_low (Tensor): Output degraded images of shape (H/ratio,W/ratio,C).
-    '''
-
-    device = img.device
-    # print(img.shape)
-    img_hr = img.permute(2, 0, 1)  # change (H,W,C) to (1,C,H,W)
-    # print(img_hr.shape)
-    img_hr = img_hr.unsqueeze(0)
-    kernel_size = int(random.choice([7, 9, 11, 13, 15, 17, 19, 21]))
-    kernel_width_iso = random.uniform(0.1, 2.4)
-    resolution = 2
-    angle = random.uniform(0, np.pi)
-    kernel_width_un1 = random.uniform(0.5, 6)
-    kernel_width_un2 = random.uniform(0.5, kernel_width_un1)
-
-    # random choose from three degradation types
-    deg_type = random.choice(['none', 'iso', 'aniso', 'both'])
-    # random choose from three interpolate types
-    scale_mode = random.choice(['nearest', 'bilinear', 'bicubic'])
-
-    # Choose to use or not use blur
-    if deg_type == 'none':  # adopt none blur
-        img_blur = img_hr
-
-    elif deg_type == 'iso':  # adopt isotropic Gaussian blur
-        k = isotropic_Gaussian(kernel_size, kernel_width_iso)
-        k_ts = torch.from_numpy(k).unsqueeze(0).to(torch.device(device))
-        img_blur = filter2d(img_hr, k_ts)
-
-    elif deg_type == 'aniso':  # adopt anisotropic Gaussian blur
-        k = anisotropic_Gaussian(kernel_size, angle, kernel_width_un1, kernel_width_un2)
-        k_ts = torch.from_numpy(k).unsqueeze(0).to(torch.device(device))
-        img_blur = filter2d(img_hr, k_ts)
-
-    # Down Sampling, random choose from 1~4
-    img_dr = interpolate(img_blur, scale_factor=1 / resolution, mode=scale_mode)
-
-    # add noise
-    noise_level_img = random.uniform(0, 25) / 255.0
-    noise = torch.normal(mean=0.0, std=noise_level_img, size=img_dr.shape).to(torch.device(device))
-    img_dr += noise
-
-    return img_dr.squeeze(0).permute(1, 2, 0)
 
 
 def main(img_path, json_path, deg_type='random_blur', resolution=2):
